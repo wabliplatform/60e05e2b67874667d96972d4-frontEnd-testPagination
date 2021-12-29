@@ -22,12 +22,13 @@ class Card {
     /**
      * Constructs a new <code>Card</code>.
      * @alias module:model/Card
+     * @param cardImage {String} 
      * @param cardText {String} 
      * @param cardDescription {String} 
      */
-    constructor(cardText, cardDescription) { 
+    constructor(cardImage, cardText, cardDescription) { 
         
-        Card.initialize(this, cardText, cardDescription);
+        Card.initialize(this, cardImage, cardText, cardDescription);
     }
 
     /**
@@ -35,7 +36,8 @@ class Card {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, cardText, cardDescription) { 
+    static initialize(obj, cardImage, cardText, cardDescription) { 
+        obj['cardImage'] = cardImage;
         obj['cardText'] = cardText;
         obj['cardDescription'] = cardDescription;
     }
@@ -54,6 +56,9 @@ class Card {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
+            if (data.hasOwnProperty('cardImage')) {
+                obj['cardImage'] = ApiClient.convertToType(data['cardImage'], 'String');
+            }
             if (data.hasOwnProperty('cardText')) {
                 obj['cardText'] = ApiClient.convertToType(data['cardText'], 'String');
             }
@@ -71,6 +76,11 @@ class Card {
  * @member {String} _id
  */
 Card.prototype['_id'] = undefined;
+
+/**
+ * @member {String} cardImage
+ */
+Card.prototype['cardImage'] = undefined;
 
 /**
  * @member {String} cardText
