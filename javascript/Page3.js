@@ -16,11 +16,6 @@ let apiCardApi = new TempApi.CardApi();import TempApi from '../src/index';docume
         if(insideSubDataElement !== null){
           insideSubDataElement.textContent = data[data.length -i -1].cardDescription;
         }
-       } catch (e) { console.log(e) };try { 
-        const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'cardImage']");
-        if(insideSubDataElement !== null){
-          insideSubDataElement.textContent = data[data.length -i -1].cardImage;
-        }
        } catch (e) { console.log(e) };
         
       }
@@ -96,11 +91,6 @@ let apiCardApi = new TempApi.CardApi();import TempApi from '../src/index';docume
     const insideSubDataElement = subDataElements[i-(chunk-1 )*subDataElements.length].querySelector("[annotationname = 'cardDescription']");
     if(insideSubDataElement !== null){
       insideSubDataElement.textContent = data[revertIndex].cardDescription;
-    }
-   } catch (e) { console.log(e) };try { 
-    const insideSubDataElement = subDataElements[i-(chunk-1 )*subDataElements.length].querySelector("[annotationname = 'cardImage']");
-    if(insideSubDataElement !== null){
-      insideSubDataElement.textContent = data[revertIndex].cardImage;
     }
    } catch (e) { console.log(e) };
         }
