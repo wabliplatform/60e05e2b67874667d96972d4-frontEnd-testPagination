@@ -1,4 +1,8 @@
-let apiCardApi = new TempApi.CardApi();import TempApi from '../src/index';window.onload = () => {apiCardApi.getAllcard((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("ivyy9").querySelectorAll( "[dataitem='true']" );
+let apiCardApi = new TempApi.CardApi();import TempApi from '../src/index';document.getElementById('ieidx').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/Page2';}};document.getElementById('imojm').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/Page3';}};window.onload = () => {apiCardApi.getAllcard((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("ivyy9").querySelectorAll( "[dataitem='true']" );
   data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
