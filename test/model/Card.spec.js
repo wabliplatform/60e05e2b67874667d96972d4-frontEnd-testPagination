@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property cardImage (base name: "cardImage")', function() {
+      // uncomment below and update the code to test the property cardImage
+      //var instance = new TempApi.Card();
+      //expect(instance).to.be();
+    });
+
     it('should have the property cardText (base name: "cardText")', function() {
       // uncomment below and update the code to test the property cardText
       //var instance = new TempApi.Card();
